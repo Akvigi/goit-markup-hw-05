@@ -49,12 +49,6 @@
                     <h1 class="a">Эффективные решения для вашего бизнеса</h1>
                     <button class="zakazuslugi" type="button" data-modal-open>Заказать услугу</button>
 
-                    <div class="backdrop is-hidden" data-modal>
-                        <div class="modal">
-                            
-                            <button data-modal-close></button>
-                        </div>
-                    </div>
                 </div>
             </section>
             <!-- плюсы компании -->
@@ -367,6 +361,16 @@
                 </ul>
             </div>
         </footer>
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button type="button" class="modal-close" data-modal-close>
+                    <svg class="buttonclosemodal">
+                        <use  href="./images/icons.svg#icon-close-black-18dp-2-1">
+                        </use>
+                    </svg>
+                </button>
+            </div>
+        </div>
         <script src="./js/modal.js"></script>
     </body>
 </html>
