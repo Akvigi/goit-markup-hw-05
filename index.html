@@ -18,7 +18,7 @@
                     <nav class="navigation">
                         <a class="logo"  href=""><span class="logospecial">Web</span>Studio</a>
                         <ul class="list listnav" >
-                            <li class="li_nav"><a class="linknav"  href="./index.html">Студия</a></li>
+                            <li class="li_nav"><a class="linknav current"  href="./index.html">Студия</a></li>
                             <li class="li_nav"><a class="linknav"  href="./portfolio.html">Портфолио</a></li>
                             <li class="li_nav"><a class="linknav"  href="">Контакты</a></li>
                         </ul>
@@ -47,7 +47,14 @@
             <section class="sectionh1">
                 <div class="background-img-h1">
                     <h1 class="a">Эффективные решения для вашего бизнеса</h1>
-                    <button class="zakazuslugi" type="button">Заказать услугу</button>
+                    <button class="zakazuslugi" type="button" data-modal-open>Заказать услугу</button>
+
+                    <div class="backdrop is-hidden" data-modal>
+                        <div class="modal">
+                            
+                            <button data-modal-close></button>
+                        </div>
+                    </div>
                 </div>
             </section>
             <!-- плюсы компании -->
@@ -93,9 +100,24 @@
                         Чем мы занимаемся
                     </h2>
                     <ul class="list list_whatwedo" >
-                        <li class="li_image"><img src="./images/f1.jpg" alt="coding" Width="370" height="294"></li>
-                        <li class="li_image"><img src="./images/f2.jpg" alt="optimizing" Width="370" height="294"></li>
-                        <li class="li_image"><img src="./images/f3.jpg" alt="disining" Width="370" height="294"></li>
+                        <li class="li_image">
+                            <img src="./images/f1.jpg" alt="coding" Width="370" height="294">
+                            <div class="overlay_whatwedo">
+                                <p class="abs_text_whatwedo">Десктопные приложения</p>
+                            </div>
+                        </li>
+                        <li class="li_image">
+                            <img class="imgwhatwedo" src="./images/f2.jpg" alt="optimizing" Width="370" height="294">
+                            <div class="overlay_whatwedo">
+                                <p class="abs_text_whatwedo">Мобильные приложения</p>
+                            </div>
+                        </li>
+                        <li class="li_image">
+                            <img src="./images/f3.jpg" alt="disining" Width="370" height="294">
+                            <div class="overlay_whatwedo">
+                                <p class="abs_text_whatwedo">дизайнерские решения</p>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </section>
@@ -345,5 +367,6 @@
                 </ul>
             </div>
         </footer>
+        <script src="./js/modal.js"></script>
     </body>
 </html>

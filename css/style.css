@@ -110,6 +110,24 @@ body {
   line-height: 1.14;
   color: #212121;
   font-weight: 500;
+  transform: color;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.current {
+  color: var(--active-link-color);
+  position: relative;
+}
+
+.current::after {
+  content: '';
+  width: 100%;
+  height: 4px;
+  background-color: var(--active-link-color);
+  left: 0;
+  bottom: -28px;
+  border-radius: 2px;
+  position: absolute;
 }
 
 .linknav:active,
@@ -140,6 +158,8 @@ body {
   text-decoration: none;
   flex-direction: row;
   display: flex;
+  transform: color;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .linkadress:active,
@@ -156,6 +176,8 @@ body {
 .addres-icon-smart {
   justify-content: center;
   align-items: center;
+  transform: fill;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .linkadress:active .addres-icon,
@@ -206,6 +228,9 @@ h1.a {
   font-weight: 700;
   background-color: var(--active-link-color);
   border-radius: 4px;
+  transform: color, background-color;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .zakazuslugi:hover {
   background-color: #188ce8;
@@ -234,6 +259,34 @@ h1.a {
 .li_image,
 .liplusy {
   padding: 0 30px 0 0;
+}
+
+.li_image {
+  position: relative;
+}
+
+.abs_text_whatwedo {
+  font-size: 14px;
+  line-height: 16.41px;
+  font-weight: 700;
+  text-align: center;
+  margin: 27px 0;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+
+.imgwhatwedo {
+  position: relative;
+}
+
+.overlay_whatwedo {
+  width: 100%;
+  height: 70px;
+  max-width: 370px;
+  position: absolute;
+  left: 0;
+  top: 224px;
+  background-color: #2f303acc;
 }
 
 h2.b1 {
@@ -314,10 +367,14 @@ p.d {
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: border-color;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-logo {
   fill: var(--logo-color);
+  transform: fill;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .li-client:not(:last-child) {
@@ -407,6 +464,8 @@ p.g {
   justify-content: center;
   display: flex;
   align-items: center;
+  transform: background-color;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover,
@@ -416,6 +475,8 @@ p.g {
 
 .social-icon {
   fill: var(--logo-color);
+  transform: fill;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover .social-icon,
@@ -479,6 +540,8 @@ p.g {
   text-decoration: none;
   color: #ffffff99;
   padding: 9px 0;
+  transform: color;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .linkfooter:hover {
@@ -526,6 +589,8 @@ p.g {
   justify-content: center;
   display: flex;
   align-items: center;
+  transform: background-color;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon-footer {
@@ -579,6 +644,9 @@ p.g {
   padding: 6px 22px;
   font-weight: 500;
   border: 0px;
+  transform: color, background-color;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button_portfolio:hover,
@@ -587,13 +655,41 @@ p.g {
   background-color: var(--active-link-color);
 }
 
+.text_onimg {
+  position: absolute;
+  color: var(--white-color);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  margin: 63px 24px;
+}
+
+.overlayportfolio {
+  transform: translateY(-100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 370px;
+  height: 294px;
+  background-color: #2196f3e5;
+}
+
 .img_li_portfolio {
   margin-top: 30px;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  position: relative;
 }
 
 .img_li_portfolio:focus,
 .img_li_portfolio:hover {
   box-shadow: 1px 4px 6px 0px #00000029, 0px 4px 4px 0px #0000000f, 0px 1px 1px 0px #0000001f;
+}
+
+.img_li_portfolio:focus .overlayportfolio,
+.img_li_portfolio:hover .overlayportfolio {
+  transform: translateY(0%);
 }
 
 h3.portfolio {
