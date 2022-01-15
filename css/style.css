@@ -125,7 +125,7 @@ body {
   height: 4px;
   background-color: var(--active-link-color);
   left: 0;
-  bottom: -28px;
+  bottom: -32px;
   border-radius: 2px;
   position: absolute;
 }
@@ -739,8 +739,8 @@ p.portfolio {
   transform: scale(1.5);
 }
 .modal {
-  width: 581px;
-  min-height: 528px;
+  width: 528px;
+  min-height: 581px;
   background-color: var(--white-color);
   border-radius: 4px;
   position: absolute;
